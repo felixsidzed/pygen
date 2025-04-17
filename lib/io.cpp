@@ -6,8 +6,6 @@ extern "C" void print(const char* message) {
 	HANDLE stdout = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (stdout != INVALID_HANDLE_VALUE && message) {
 		WriteConsoleA(stdout, message, lstrlenA(message), &written, nullptr);
-	} else {
-		WriteConsoleA(stdout, "invalid message or handle", 26, &written, nullptr);
 	}
 }
 #else
