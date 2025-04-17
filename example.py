@@ -1,6 +1,4 @@
-# You should use `import pygen' instead of this
-# unless you are modifying example.py
-import __init__ as pygen
+import pygen
 
 # Helper function to print binary data in a hex format
 def printBytes(data: bytearray):
