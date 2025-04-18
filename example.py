@@ -37,7 +37,7 @@ def main():
 	stringOffset = rdata.emit(b"Hello, World!\n\0")
 
 	# Define a symbol for the main function so the linker knows where our entry point is
-	gen.symbol("main", 0, 1, 0x20)
+	gen.symbol("longfunctionname", 0, 1, 0x20)
 
 	# Define a symbol for our `Hello, World!` string
 	gen.symbol("aHello", stringOffset, 2, 0x0)  # 2 = .rdata section
